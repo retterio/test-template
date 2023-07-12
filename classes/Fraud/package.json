@@ -1,0 +1,10 @@
+{
+  "name": "fraud",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc -b .",
+    "test": "ava",
+    "coverage": "nyc ava",
+    "export-models": "ts-node scripts/export-models.ts"
+  }
+}

@@ -1,0 +1,23 @@
+authorizer: index.authorizer
+init: 
+  handler: index.init
+  inputModel: FraudInitInput
+getInstanceId: index.getInstanceId
+getState: index.getState
+dependencies:
+  - utils
+  - config-layer
+methods:
+  - method: check
+    description: >
+      Checks limits
+    inputModel: CheckFraudInput
+    type: READ
+    handler: fraud.check
+
+  - method: add
+    description: >
+      Add new fraud data
+    inputModel: AddFraudInput
+    type: WRITE
+    handler: fraud.add
